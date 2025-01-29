@@ -1,6 +1,6 @@
 {
   "name": "genesis",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
     "dev": "concurrently \"next dev --experimental-https\" \"ngrok http --url=awake-advanced-marten.ngrok-free.app https://localhost:3000\"",
