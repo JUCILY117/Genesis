@@ -56,7 +56,7 @@ With **zero third-party libraries**, we’ve built all the integrations **from s
 
 - **Next.js 14** 🚀 – A powerful React framework for building static and dynamic apps.
 - **Clerk** 🔐 – Secure authentication and user management.
-- **Neon Tech** – A modern serverless database for seamless backend storage.
+- **Neon Tech** 🛢 – A modern serverless database for seamless backend storage.
 - **Uploadcare** 📸 – For smooth, fast, and secure file uploads.
 - **Stripe** 💳 – For subscription payments and credits-based billing.
 - **Ngrok** 🌐 – Expose your local development environment for testing webhooks and third-party API interactions.
@@ -96,7 +96,7 @@ With **zero third-party libraries**, we’ve built all the integrations **from s
 ### 🔧 **Technologies Used**
 - **Next.js 14** 🚀
 - **Clerk** 🔐
-- **Neon Tech** 
+- **Neon Tech** 🛢
 - **Uploadcare** 📸
 - **Stripe** 💳
 - **Ngrok** 🌐
