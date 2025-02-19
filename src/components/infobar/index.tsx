@@ -40,7 +40,7 @@ const InfoBar = (props: Props) => {
           <span>Unlimited</span>
         ) : (
           <span>
-            {credits}/{tier == 'Free' ? '10' : tier == 'Pro' && '100'}
+            {credits}/{tier == 'Hobby' ? '10' : tier == 'Pro Plan' && '100'}
           </span>
         )}
       </span>

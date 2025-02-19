@@ -17,7 +17,7 @@ model User {
   name         String?
   email        String  @unique
   profileImage String?
-  tier         String? @default("Free")
+  tier         String? @default("Hobby")
   credits      String? @default("10")
 
   createdAt        DateTime @default(now())

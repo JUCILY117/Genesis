@@ -30,7 +30,7 @@ const Billing = async (props: Props) => {
           credits:
             session.data[0].description == 'Unlimited'
               ? 'Unlimited'
-              : session.data[0].description == 'Pro'
+              : session.data[0].description == 'Pro Plan'
               ? '100'
               : '10',
         },

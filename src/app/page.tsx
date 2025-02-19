@@ -8,10 +8,8 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { clients, products } from '@/lib/constant'
 import { CheckIcon } from 'lucide-react'
-import Image from 'next/image'
 
 export default function Home() {
-  //WIP: remove fault IMAge for home page
   return (
     <main className="flex items-center justify-center flex-col overflow-x-hidden select-none">
       <Navbar />
@@ -25,7 +23,7 @@ export default function Home() {
                   size={'lg'}
                   className="p-8 mb-8 md:mb-0 text-2xl w-full sm:w-fit border-t-2 rounded-full border-[#4D4D4D] bg-[#1F1F1F] hover:bg-gradient-to-t hover:from-neutral-300 hover:to-neutral-600 group transition-all flex items-center justify-center gap-4 hover:shadow-md hover:shadow-neutral-500 duration-500"
                 >
-                  <Link href={'/dashboard'}>
+                  <Link href={'/workflows'}>
                   <span className="bg-clip-text text-transparent bg-gradient-to-t from-neutral-200 to-neutral-600 font-zhcn  md:text-center font-sans group-hover:bg-gradient-to-r group-hover:from-black goup-hover:to-black group-hover:text-black">
                     Start For Free Today
                   </span>

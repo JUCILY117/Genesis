@@ -115,6 +115,16 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        shimmer: {
+          from: {
+            backgroundPosition: '0 0',
+            backgroundColor: '#ffffff',  // Lighter, reflective color
+          },
+          to: {
+            backgroundPosition: '-200% 0',
+            backgroundColor: '#e0e0e0',  // A reflective light gray
+          },
+        },
       },
       animation: {
         scroll:
@@ -127,6 +137,7 @@ const config = {
         third: 'moveInCircle 40s linear infinite',
         fourth: 'moveHorizontal 40s ease infinite',
         fifth: 'moveInCircle 20s ease infinite',
+        shimmer: 'shimmer 2s linear infinite',
       },
     },
   },

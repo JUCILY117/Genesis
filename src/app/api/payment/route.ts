@@ -15,6 +15,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const baseUrl = process.env.NEXT_PUBLIC_URL;
   const stripe = new Stripe(process.env.STRIPE_SECRET!, {
     typescript: true,
     apiVersion: '2023-10-16',
@@ -29,8 +30,8 @@ export async function POST(req: NextRequest) {
     ],
     mode: 'subscription',
     success_url:
-      'https://localhost:3000/billing?session_id={CHECKOUT_SESSION_ID}',
-    cancel_url: 'https://localhost:3000/billing',
+      `${baseUrl}/billing?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${baseUrl}/billing`,
   })
   return NextResponse.json(session.url)
 }

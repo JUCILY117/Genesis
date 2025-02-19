@@ -1,16 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(req: NextRequest) {
-  // Extract the code parameter from the query string
   const code = req.nextUrl.searchParams.get('code')
+  const baseUrl = process.env.NEXT_PUBLIC_URL;
 
-  // Check if the code parameter is missing
   if (!code) {
     return new NextResponse('Code not provided', { status: 400 })
   }
 
   try {
-    // Make a POST request to Slack's OAuth endpoint to exchange the code for an access token
     const response = await fetch('https://slack.com/api/oauth.v2.access', {
       method: 'POST',
       headers: {
@@ -26,7 +24,6 @@ export async function GET(req: NextRequest) {
 
     const data = await response.json()
 
-    // Check if the response indicates a failure
     if (!data.ok) {
       throw new Error(data.error || 'Slack OAuth failed')
     }
@@ -40,9 +37,8 @@ export async function GET(req: NextRequest) {
       const teamId = data?.team?.id
       const teamName = data?.team?.name
 
-      // Handle the successful OAuth flow and redirect the user
       return NextResponse.redirect(
-        `https://localhost:3000/connections?app_id=${appId}&authed_user_id=${userId}&authed_user_token=${userToken}&slack_access_token=${accessToken}&bot_user_id=${botUserId}&team_id=${teamId}&team_name=${teamName}`
+        `${baseUrl}/connections?app_id=${appId}&authed_user_id=${userId}&authed_user_token=${userToken}&slack_access_token=${accessToken}&bot_user_id=${botUserId}&team_id=${teamId}&team_name=${teamName}`
       )
     }
   } catch (error) {

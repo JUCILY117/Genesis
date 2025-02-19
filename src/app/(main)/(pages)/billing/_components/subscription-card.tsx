@@ -33,24 +33,24 @@ export const SubscriptionCard = ({ onPayment, products, tier }: Props) => {
               <CardDescription>
                 {product.nickname == 'Unlimited'
                   ? 'Enjoy a monthly torrent of credits flooding your account, empowering you to tackle even the most ambitious automation tasks effortlessly.'
-                  : product.nickname == 'Pro'
+                  : product.nickname == 'Pro Plan'
                   ? 'Experience a monthly surge of credits to supercharge your automation efforts. Ideal for small to medium-sized projects seeking consistent support.'
-                  : product.nickname == 'Free' &&
+                  : product.nickname == 'Hobby' &&
                     "Get a monthly wave of credits to automate your tasks with ease. Perfect for starters looking to dip their toes into Fuzzie's automation capabilities."}
               </CardDescription>
               <div className="flex justify-between">
                 <p>
-                  {product.nickname == 'Free'
+                  {product.nickname == 'Hobby'
                     ? '10'
-                    : product.nickname == 'Pro'
+                    : product.nickname == 'Pro Plan'
                     ? '100'
-                    : product.nickname == 'Unlimited' && 'unlimited'}{' '}
-                  credits
+                    : product.nickname == 'Unlimited' && 'Unlimited'}{' '}
+                  Credits
                 </p>
                 <p className="font-bold">
-                  {product.nickname == 'Free'
-                    ? 'Free'
-                    : product.nickname == 'Pro'
+                  {product.nickname == 'Hobby'
+                    ? '$0'
+                    : product.nickname == 'Pro Plan'
                     ? '$29.99'
                     : product.nickname == 'Unlimited' && '$99.99'}
                   /mo
@@ -67,6 +67,7 @@ export const SubscriptionCard = ({ onPayment, products, tier }: Props) => {
                 <Button
                   onClick={() => onPayment(product.id)}
                   variant="outline"
+                  className='text-md'
                 >
                   Purchase
                 </Button>
