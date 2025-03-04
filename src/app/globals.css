@@ -34,6 +34,29 @@ body {
   font-family: 'ZHCN', sans-serif;
 }
 
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background-color: currentColor;
+  transition: width 0.7s ease, left 0.7s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

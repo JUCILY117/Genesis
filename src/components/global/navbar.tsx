@@ -24,29 +24,26 @@ const Navbar = async (props: Props) => {
       <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block">
         <ul className="flex items-center gap-4 list-none">
           <li>
-            <Link href="#">Products</Link>
+            <Link href="#" className="nav-link">Products</Link>
           </li>
           <li>
-            <Link href="#">Pricing</Link>
-          </li>
-          {/* <li>
-            <Link href="#">Clients</Link>
-          </li> */}
-          <li>
-            <Link href="#">Resources</Link>
+            <Link href="#" className="nav-link">Pricing</Link>
           </li>
           <li>
-            <Link href="#">Documentation</Link>
+            <Link href="#" className="nav-link">Resources</Link>
           </li>
           <li>
-            <Link href="#">Enterprise</Link>
+            <Link href="#" className="nav-link">Documentation</Link>
+          </li>
+          <li>
+            <Link href="#" className="nav-link">Enterprise</Link>
           </li>
         </ul>
       </nav>
       <aside className="flex items-center gap-4">
         <Link
           href="/workflows"
-          className="relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+          className="relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 transition-all duration-400  focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
         >
           {/* <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" /> */}
           <span className="inline-flex animate-shimmer items-center justify-center rounded-md border focus:outline-none border-neutral-800 bg-[linear-gradient(110deg,#000000,45%,#1a1a1a,55%,#000000)] bg-[length:200%_100%] px-6 font-medium text-neutral-300 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
