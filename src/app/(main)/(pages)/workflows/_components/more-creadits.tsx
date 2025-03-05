@@ -12,7 +12,7 @@ const MoreCredits = (props: Props) => {
   ) : (
     <Card>
       <CardContent className="p-6">
-        <CardDescription>You are out of credits</CardDescription>
+        <CardDescription>You are out of credits. Please upgrade your plan at <a href='/billing' className='text-violet-400 hover:underline'>billing</a>.</CardDescription>
       </CardContent>
     </Card>
   )
